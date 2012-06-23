@@ -1,8 +1,13 @@
-# Workshop DD. MMMM YYYY
+# Workshop 29. Juni 2012
 
 ## Inhalt
 
-Kurze Einführung in die Thematik
+ * Iteratoren
+ * Fortgeschrittene Datenstrukturen (STL)
+ * Templates revisited?
+ * Exceptions
+ * Streams
+ * Literals
 
 ### Folien zum Vortrag
 
