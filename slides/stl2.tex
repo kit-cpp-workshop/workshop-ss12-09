@@ -71,8 +71,74 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{\texttt{priority\_queue}}
+\begin{frame}{Prioritätslisten (Priority Queues)}
+	\begin{block}{Was?}
+		\begin{itemize}
+			\item Menge von Elementen mit einem Schlüssel
+			\item Geordnet nach Schlüssel (Ordnungsrelation: $\le$)
+			\item Wichtigste Operationen: 
+			\begin{itemize}
+				\item \texttt{insert(key, value)} 
+				\item \texttt{deleteMin()} \tiny{(Alternativ: \texttt{deleteMax()}) $\rightarrow$ MinHeap/MaxHeap}
+			\end{itemize}
+			\item Für viele Algorithmen nützlich
+		\end{itemize}
+	\end{block}
+	\pause
+	\begin{block}{Wie?}
+		\begin{columns}
+			\column{0.7\linewidth}
+				\vspace{-0.5em}
+				\begin{itemize}
+					\item Binäre Heaps
+					\begin{itemize}
+						\item Baumstruktur
+						\item Jeder Knoten hat 0..2 Kindknoten
+						\item Keine Löcher, Fehlstellen nur rechtsseitig
+						\item Tiefe: $\lfloor log_2(n) \rfloor$
+					\end{itemize}
+					\item Heap-Eigenschaft: Elternknoten $\le$ Kindknoten
+				\end{itemize}
+			\column{0.3\linewidth}
+				\includegraphics[width=0.95\linewidth]{images/heap.pdf}
+		\end{columns}
+	\end{block}
+\end{frame}
 
+\begin{frame}{Binäre Heaps: \texttt{insert()}}
+	\begin{center}
+		\includegraphics[width=0.90\linewidth]{images/heap_insert.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Binäre Heaps: \texttt{deleteMin()}}
+	\begin{center}
+		\includegraphics[width=0.90\linewidth]{images/heap_delete.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Binäre Heaps: Einbettung}
+	\begin{center}
+		\includegraphics[width=0.85\linewidth]{images/heap_embed.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}{\texttt{priority\_queue}}
+	\begin{itemize}
+		\item Kann mit \texttt{deque} und \texttt{vector} arbeiten, aber nicht mit \texttt{list}
+		\begin{itemize}
+			\item \alert{Warum?}
+			\pause
+			\item Einbettung: Größere Sprünge beim Traversieren $\rightarrow$ \enquote{teuer} ($\mathcal{O}(n)$)
+		\end{itemize}
+		\item Wichtig: \texttt{top()}, \texttt{push()} und \texttt{pop()}
+		\pause
+		\item Laufzeit: $\mathcal{O}(log(n))$ für Modifikationen
+	\end{itemize}
+	
+	\pause
+	
+	\lstinputlisting[basicstyle=\scriptsize]{cpp-code/pq-usage.cpp}
 \end{frame}
 
 \subsection{associative containers}
