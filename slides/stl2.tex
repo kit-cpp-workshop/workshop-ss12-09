@@ -134,6 +134,7 @@
 		\item Wichtig: \texttt{top()}, \texttt{push()} und \texttt{pop()}
 		\pause
 		\item Laufzeit: $\mathcal{O}(log(n))$ für Modifikationen
+		\item Heap-Eigenschaft hier: child @ parent (@ : Vergleichsoperator)
 	\end{itemize}
 	
 	\pause
@@ -159,17 +160,72 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{\texttt{(multi)map}}
+\begin{frame}{Sortierte Folgen}
+	\begin{itemize}
+		\item Zuordnung Schlüssel $\rightarrow$ Element
+		\item Speicherung: Geordnet nach Schlüssel
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{images/sorted_sequence.pdf}
+	\end{center}
+\end{frame}
 
+\begin{frame}{\texttt{(multi)map}}
+	\begin{itemize}
+		\item \texttt{multimap}: Erlaubt mehr als ein Element je Schlüsselwert
+		\item Schlüssel + Element: \texttt{pair<key\_t, value\_t>}
+		\pause
+		\item Wichtige Operationen:
+		\begin{itemize}
+			\item \texttt{find(key\_t)}
+			\item \texttt{operator[key\_t]}
+			\item \texttt{insert(pair<\dots>)}, \texttt{erase(key\_t)}
+			\item \texttt{lower\_bound(key\_t)}, \texttt{upper\_bound(key\_t)}
+		\end{itemize}
+		\pause
+		\item Zeitkomplexität: Meist $\mathcal{O}(log(n))$
+	\end{itemize}
+	
+	\pause
+	\lstinputlisting[basicstyle=\scriptsize]{cpp-code/map-usage.cpp}
+	\pause
+	
+	Mehr/bessere Beispiele: \url{http://www.cplusplus.com/reference/stl/map/}
 \end{frame}
 
 \begin{frame}{\texttt{(multi)set}}
-	
+	\begin{itemize}
+		\item \texttt{set<type>} == \texttt{map<type, type>}
+		\item $\rightarrow$ Element ist gleichzeitig Schlüssel
+		\pause
+		\item Wichtige Operationen:
+		\begin{itemize}
+			\item \texttt{find()}
+			\item \texttt{insert(}, \texttt{erase()}
+			\item \texttt{lower\_bound()}, \texttt{upper\_bound()}
+		\end{itemize}
+		\pause
+		\item Zeitkomplexität: Meist $\mathcal{O}(log(n))$
+	\end{itemize}
 \end{frame}
 
 \subsection{bitset}
 
 \begin{frame}{\texttt{bitset}}
-	
+	\begin{itemize}
+		\item Der Name ist irreführend! Besser wäre \texttt{bitvector}
+		\item Kann: Bitfolgen kompakt speichern
+		\item Achtung: Die Größe ist fix (Template-Parameter)
+		\begin{itemize}
+			\item Im Gegensatz zu \texttt{vector<bool>}
+		\end{itemize}
+		\pause
+		\item Wichtige Operationen:
+		\begin{itemize}
+			\item \texttt{set()}, \texttt{reset()} und \texttt{flip()}
+			\item \texttt{test()}, \texttt{any()} und \texttt{none()}
+		\end{itemize}
+		\item Zeitkomplexität: $\mathcal{O}(1)$
+	\end{itemize}
 \end{frame}
 
