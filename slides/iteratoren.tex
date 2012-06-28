@@ -36,3 +36,61 @@ for(int i : meineListe) {
 	\onslide*<+> { \lstinputlisting[linerange=begin-main]{cpp-code/iterator-functempl.cpp} }
 	\onslide<+-> { \lstinputlisting[linerange=begin-]{cpp-code/iterator-functempl.cpp} }
 \end{frame}
+
+\begin{frame}{STL und Iteratoren}
+	Iteratoren bilden das Bindeglied zwischen Containern und Algorithmen, z.B.:
+	\begin{lstlisting}
+		std::vector < int > myVec = { 4, 3, 1, 2 };
+		std::sort( myVec.begin(), myVec.end() );
+	\end{lstlisting}
+	
+	\pause
+	Mittels Iteratoren lassen sich auch Daten überführen:
+	
+	\begin{lstlisting}
+		std::vector < int > myVec = { 4, 4, 4, 3 };
+		std::list < int > myList = {myVec.begin(), myVec.end()};
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Iterator-Kategorien}
+	\footnotesize
+	
+	Inspiration: \url{http://en.cppreference.com/w/cpp/iterator}
+	\vspace{0.5em}
+	\includegraphics[width=\textwidth]{images/iterator-categories}
+	
+	\vspace{0.5em}
+	\pause
+	
+	\begin{columns}
+		\column{0.2\textwidth}
+			Mit:\\
+			\texttt{iterator i, j;}	\\
+			\texttt{value\_t value;}	\\
+			\texttt{int n;}	\\
+			
+		\column{0.8\textwidth}
+			\begin{tabular}{l|l}
+				\textbf{capability}	&	\textbf{syntax}	\\
+				\hline
+				read	&	\texttt{value = *i}	\\
+				write	&	\texttt{*i = value}	\\
+				iterate	&	\texttt{++i}, \texttt{i++}	\\
+				reverse-iterate	&	\texttt{--i}, \texttt{i--}	\\
+				random access &	\texttt{j = i + n}	\\
+			\end{tabular}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Iterator-Kategorien und Datenstrukturen}
+	\begin{tabular}
+		Datenstruktur	&	Iterator	\\
+		\texttt{vector}	&	random-acccess	\\
+		\texttt{list}	&	bi-directional	\\
+		\texttt{map}	&	bi-directional	\\
+		input stream	&	input	\\
+		output stream	&	output	\\
+		io stream		&	forward	\\
+	\end{tabular}
+\end{frame}
