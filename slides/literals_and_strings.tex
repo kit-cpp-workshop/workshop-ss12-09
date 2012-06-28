@@ -12,7 +12,7 @@
         Typ & Beispiel \\
         \midrule
         char & 'A' \\
-        char* (char-Array) & "Hello World!" \\
+        const char[] (char-Array, Null-terminiert!) & "Hello World!" \\
         int & 42 \\
         float & 1.6e-19 \\
         \bottomrule
@@ -66,3 +66,36 @@
 \end{frame}
 
 \section{Strings}
+
+\begin{frame}{Probleme mit C-Strings}
+    \begin{block}{Probleme mit C-Strings}
+    \begin{itemize}
+    \item Schwierige Handhabung, z.\,B. wegen Null-Terminierung
+    \item Keine einfache Möglichkeit, mehr als die Ascii-Zeichen zu benutzen (zum Beispiel Unicode)
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{String-Klassen}
+    \begin{block}{std::string}
+    \texttt{std::string} ist die String-Klasse der Standardbibliothek. Praktische Methoden:
+    \begin{itemize}
+    \item \texttt{size()}
+    \item \texttt{append(str)}, \texttt{insert(position, str)}
+    \item \texttt{operator==(str)}
+    \end{itemize}
+    Anders als mit \texttt{char}-Arrays kann man also zum Beispiel Strings direkt vergleichen:
+    \texttt{if ( str1 == str2 ) { ... }}
+    \end{block}
+\end{frame}
+
+\begin{frame}{String-Klassen}
+    \begin{block}{QString}
+    \texttt{QString} ist die String-Klasse der Qt-Bibliothek\footnote{\url{http://qt-project.org/}}. Im Gegensatz zu \texttt{std::string} bietet \texttt{QString} echte Unicode-Unterstützung, und viele weitere nützliche Methoden, zum Beispiel:
+    \begin{itemize}
+    \item \texttt{replace(QRegExp, QString)} -- suchen und Ersetzen mit regulären Ausdrücken
+    \item \texttt{repeated(int)} -- wiederholt den String einige Male
+    \item \texttt{trimmed()} -- entfernt Leerzeichen vorne und hinten im String
+    \end{itemize}
+    \end{block}
+\end{frame}
