@@ -1,0 +1,31 @@
+\section{Etwas mehr zu templates}
+
+\begin{frame}[t]{template argument deduction}
+	Bei einem \enquote{Aufruf eines function templates} kann der Compiler (manche) template-Argumente anhand der Typen der function-call-Argumente bestimmen:
+	
+	\onslide*<+> { \lstinputlisting[linerange=begin-deduction]{cpp-code/type-deduction.cpp} }
+	\onslide<+-> { \lstinputlisting[linerange=begin-]{cpp-code/type-deduction.cpp} }
+\end{frame}
+
+\begin{frame}[t]{non-type template parameters}
+	Bisher: Typen als Parameter der Vorlage\\
+	\onslide<2> { Jetzt neu: z.B. \texttt{int} als Parameter der Vorlage }
+	
+	\onslide*<1> { \lstinputlisting[linerange=int-instantiation]{cpp-code/non-type-template-parameters.cpp} }
+	\onslide<2> { \lstinputlisting[linerange=int-]{cpp-code/non-type-template-parameters.cpp} }
+\end{frame}
+
+\begin{frame}{non-type template parameters: constraints}
+	Der Wert muss eine constant-expression sein, also dem Compiler bekannt!	\\
+	Denn sonst kann dieser das Template nicht Instantiieren.
+	
+	\vspace{2em}
+	
+	Erlaubte Typen:
+	\begin{itemize}
+		\item integral
+		\item enumeration
+		\item exotisch: Referenz oder Poiniter zu »Ding« \emph{mit external linkage}
+		\item kein String!
+	\end{itemize}
+\end{frame}
