@@ -1,7 +1,7 @@
 // #include <priority_queue> #include <functional> // for greater<T>
 
 struct Bar_t { int a, b; };
-class BartComp {
+struct BartComp {
 	bool operator() (const Bar_t &lhs, const Bar_t &rhs) const {
 		return (lhs.a != rhs.a) ? (lhs.a < rhs.a) : (lhs.b < rhs.b);
 	}
