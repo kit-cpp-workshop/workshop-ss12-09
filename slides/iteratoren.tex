@@ -10,7 +10,6 @@
 \end{frame}
 
 \begin{frame}[fragile]{Beispiel anhand \texttt{list}}
-	
 	\begin{lstlisting}[]
 #include <list>
 using intList = std::list<int>;
@@ -21,14 +20,15 @@ meineListe.push_back(1024);
 meineListe.push_front(1);
 
 // C++03
-for(intIt it = meineListe.begin(); it != meineListe.end(); it++)
-{
+for(intIt it  = meineListe.begin();
+          it != meineListe.end();
+        ++it) {
     std::cout << *it << std::endl;
 }
 // C++11
-for(int i : meineListe)
-{
+for(int i : meineListe) {
     std::cout << i << std::endl;
 }
 	\end{lstlisting}
 \end{frame}
+
