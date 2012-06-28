@@ -5,11 +5,11 @@
 	\begin{lstlisting}[]
 namespace Gebaeck
 {
-	namespace Kuchen
-	{
+    namespace Kuchen
+    {
         struct A { int a; }
         struct B { A b; }
-	}
+    }
 }
 Gebaeck::Kuchen::A blub;
 blub.a = 99;
@@ -27,11 +27,11 @@ bla.b.a = 42;
 	\begin{lstlisting}[]
 namespace Gebaeck
 {
-	namespace Kuchen
-	{
+    namespace Kuchen
+    {
         struct A { int a; }
         struct B { A b; }
-	}
+    }
 }
 using C = Gebaeck::Kuchen::B;	// C++11
 // typedef Gebaeck::Kuchen::B C;	// C++03
