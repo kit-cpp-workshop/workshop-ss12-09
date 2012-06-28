@@ -190,18 +190,19 @@
 	\lstinputlisting[basicstyle=\scriptsize]{cpp-code/map-usage.cpp}
 	\pause
 	
+	\footnotesize
 	Mehr/bessere Beispiele: \url{http://www.cplusplus.com/reference/stl/map/}
 \end{frame}
 
 \begin{frame}{\texttt{(multi)set}}
 	\begin{itemize}
-		\item \texttt{set<type>} == \texttt{map<type, type>}
-		\item $\rightarrow$ Element ist gleichzeitig Schlüssel
+		\item \texttt{set<type>} == \texttt{map<type, type>}	\\
+		      d.h. Element ist gleichzeitig Schlüssel (\texttt{operator<=} usw.)
 		\pause
 		\item Wichtige Operationen:
 		\begin{itemize}
 			\item \texttt{find()}
-			\item \texttt{insert(}, \texttt{erase()}
+			\item \texttt{insert()}, \texttt{erase()}
 			\item \texttt{lower\_bound()}, \texttt{upper\_bound()}
 		\end{itemize}
 		\pause
