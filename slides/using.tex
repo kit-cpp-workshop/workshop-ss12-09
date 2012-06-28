@@ -1,0 +1,43 @@
+
+
+\begin{frame}[fragile]{"Abkürzungen" in C++}
+	
+	\begin{lstlisting}[]
+namespace Gebaeck
+{
+	namespace Kuchen
+	{
+		struct A { int a; }
+		struct B { A b; }
+	}
+}
+Gebaeck::Kuchen::A blub;
+blub.a = 99;
+
+using namespace Gebaeck::Kuchen;
+
+B bla;
+bla.b.a = 42;
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{"Abkürzungen" in C++}
+	Problem: 5 namespaces mit struct A... welchen nutzen?
+
+	\begin{lstlisting}[]
+namespace Gebaeck
+{
+	namespace Kuchen
+	{
+		struct A { int a; }
+		struct B { A b; }
+	}
+}
+using C = Gebaeck::Kuchen::B;
+
+C meinC;
+C.b.a = 273;
+	\end{lstlisting}
+\end{frame}
+
+

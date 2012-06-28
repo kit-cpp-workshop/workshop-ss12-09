@@ -1,0 +1,30 @@
+\begin{frame}[fragile]{Iteratoren in C++}
+	\begin{itemize}
+		\item Einheitlicher Zugriff auf alle STL-Container
+		\item Dadurch Algorithmen leicht auf unterschiedliche Container anzuwenden
+		\item Notwendig für Container ohne Random Access (list)
+		\item Praktisch für Assoziative container (set, map)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Iteratoren in C++}
+	
+	\begin{lstlisting}[]
+#include <list>
+using intList = std::list<int>;
+using intIt = intList::iterator;
+intList meineListe;
+meineListe.push_back(42);
+meineListe.push_back(1024);
+meineListe.push_front(1);
+
+for(intIt it = meineListe.begin(); it != meineListe.end(); it++)
+{
+	std::cout << *it << std::endl;
+}
+for(int i : meineListe)
+{
+	std::cout << i << std::endl;
+}
+	\end{lstlisting}
+\end{frame}
