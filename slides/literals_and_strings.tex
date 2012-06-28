@@ -1,0 +1,68 @@
+\section{Literale}
+\begin{frame}{Literale}
+    \begin{block}{Was ist ein Literal?}
+    Literale sind Bestandteil der Syntax der meisten Sprachen, die dazu dienen, Daten direkt in den Quellcode zu schreiben.
+    \end{block}
+    \pause
+    \begin{block}{Beispiele für Literale in C++}
+    \begin{table}
+    \center
+    \begin{tabular}{ll}
+        \toprule
+        Typ & Beispiel \\
+        \midrule
+        char & 'A' \\
+        char* (char-Array) & "Hello World!" \\
+        int & 42 \\
+        float & 1.6e-19 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Literale in C++}
+    \end{table}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Escape-Sequenzen}
+    \begin{block}{Escape-Sequenzen in String-Literalen in C++}
+    \begin{table}
+    \center
+    \begin{tabular}{ll}
+        \toprule
+        Sequenz & Wirkung \\
+        \midrule
+        \textbackslash n & Neue Zeile \\
+        \textbackslash r & Tabulator \\
+        \textbackslash\textbackslash & Backslash (\textbackslash) \\
+        \textbackslash" & Doppeltes Anführungszeichen (") \\
+        \textbackslash' & Einfaches Anführungszeichen (') \\
+        \bottomrule
+    \end{tabular}
+    \end{table}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Weniger häufig genutzte Literale}
+    \begin{block}{Weitere Beispiele für Literale}
+        \begin{table}
+        \center
+        \begin{tabular}{ll}
+            \toprule
+            Typ & Beispiel \\
+            \midrule
+            Oktalzahl (int) & 042 \\
+            Hexadezimalzahl (int) & 0x732 \\
+            \midrule
+            \pause
+            unsigned int & 42u \\
+            unsigned int, Oktal & 042u \\
+            \midrule
+            \pause
+            C++11: Benutzerdefiniert & 42.7\_meter \\
+            \bottomrule
+        \end{tabular}
+        \caption{Weitere Literale in C++}
+        \end{table}
+    \end{block}
+\end{frame}
+
+\section{Strings}
