@@ -1,5 +1,8 @@
 \section{Iteratoren}
 
+
+\subsection{Grundlegendes}
+
 \begin{frame}[fragile]{Grundlegendes}
 	\begin{itemize}
 		\item Einheitlicher Zugriff auf alle STL-Container
@@ -32,6 +35,9 @@ for(int i : meineListe) {
 	\end{lstlisting}
 \end{frame}
 
+
+\subsection{Iteratoren und Generizität}
+
 \begin{frame}[t]{generischer Ansatz}
 	\onslide*<+> { \lstinputlisting[linerange=begin-main]{cpp-code/iterator-functempl.cpp} }
 	\onslide<+-> { \lstinputlisting[linerange=begin-]{cpp-code/iterator-functempl.cpp} }
@@ -52,6 +58,9 @@ for(int i : meineListe) {
 		std::list < int > myList = {myVec.begin(), myVec.end()};
 	\end{lstlisting}
 \end{frame}
+
+
+\subsection{Iterator-Kategorien}
 
 \begin{frame}{Iterator-Kategorien}
 	\footnotesize
