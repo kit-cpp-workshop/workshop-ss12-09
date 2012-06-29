@@ -68,7 +68,7 @@ for(int i : meineListe) {
 	\onslide<+-> { \lstinputlisting[linerange=begin-]{cpp-code/iterator-functempl.cpp} }
 \end{frame}
 
-\begin{frame}{STL und Iteratoren}
+\begin{frame}[fragile]{STL und Iteratoren}
 	Iteratoren bilden das Bindeglied zwischen Containern und Algorithmen, z.B.:
 	\begin{lstlisting}
 		std::vector < int > myVec = { 4, 3, 1, 2 };
@@ -76,8 +76,9 @@ for(int i : meineListe) {
 	\end{lstlisting}
 	
 	\pause
-	Mittels Iteratoren lassen sich auch Daten überführen:
+	\vspace{2em}
 	
+	Mittels Iteratoren lassen sich auch Daten überführen:
 	\begin{lstlisting}
 		std::vector < int > myVec = { 4, 4, 4, 3 };
 		std::list < int > myList = {myVec.begin(), myVec.end()};
@@ -98,13 +99,14 @@ for(int i : meineListe) {
 	\pause
 	
 	\begin{columns}
-		\column{0.2\textwidth}
+		\hspace{13em}
+		\column{0.3\textwidth}
 			Mit:\\
 			\texttt{iterator i, j;}	\\
 			\texttt{value\_t value;}	\\
 			\texttt{int n;}	\\
 			
-		\column{0.8\textwidth}
+		\column{0.45\textwidth}
 			\begin{tabular}{l|l}
 				\textbf{capability}	&	\textbf{syntax}	\\
 				\hline
@@ -118,13 +120,16 @@ for(int i : meineListe) {
 \end{frame}
 
 \begin{frame}{Iterator-Kategorien und Datenstrukturen}
-	\begin{tabular}
-		Datenstruktur	&	Iterator	\\
-		\texttt{vector}	&	random-acccess	\\
-		\texttt{list}	&	bi-directional	\\
-		\texttt{map}	&	bi-directional	\\
-		input stream	&	input	\\
-		output stream	&	output	\\
-		io stream		&	forward	\\
-	\end{tabular}
+	\begin{center}
+		\begin{tabular}{c|c}
+			\textbf{Datenstruktur}	&	\textbf{Iterator}	\\
+			\hline
+			\texttt{vector}	&	random-acccess	\\
+			\texttt{list}	&	bi-directional	\\
+			\texttt{map}	&	bi-directional	\\
+			input stream	&	input	\\
+			output stream	&	output	\\
+			io stream		&	forward	\\
+		\end{tabular}
+	\end{center}
 \end{frame}
