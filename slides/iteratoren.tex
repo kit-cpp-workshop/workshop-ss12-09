@@ -9,6 +9,7 @@
 		\item Dadurch Algorithmen leicht auf unterschiedliche Container anzuwenden
 		\item Notwendig für Container ohne Random Access (list)
 		\item Praktisch für Assoziative container (set, map)
+		\item Verallgemeinerung von Pointern
 	\end{itemize}
 \end{frame}
 
@@ -32,6 +33,30 @@ for(intIt it  = meineListe.begin();
 for(int i : meineListe) {
     std::cout << i << std::endl;
 }
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{\texttt{begin} und \texttt{end}}
+	\begin{itemize}
+		\item jeder STL-Container hat member functions \texttt{begin} und \texttt{end}
+		\item Adapter nicht unbedingt (wo es eben keinen Sinn ergibt\dots)
+		\item \texttt{std::begin} in \texttt{<iterator>} für alle Container und plain-C-Arrays
+		\item \texttt{begin} liefert einen Iterator, der auf das erste Element zeigt
+		\item \texttt{end} liefert einen speziellen Iterator, der sozusagen auf das (letztes~+~1)ste Element zeigt
+		\item man iteriert über $[\texttt{begin}, \texttt{end})$, ebenso arbeiten Algorithmen alle auf einem $[x, y)$-Bereich
+	\end{itemize}
+	
+	\pause
+	\vspace{1em}
+	
+	Nützlich: backwards-compatible zu Pointern:
+	\begin{lstlisting}
+		char const myString[] = "foobar";
+		char const* myStringEnd = (myString+5) + 1;
+		using It = char const*;
+		
+		for(It i = myString; i != myStringEnd; ++i)
+		{ std::cout << *i; }
 	\end{lstlisting}
 \end{frame}
 
