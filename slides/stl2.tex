@@ -81,7 +81,6 @@
 				\item \texttt{insert(key, value)} 
 				\item \texttt{deleteMin()} \tiny{(Alternativ: \texttt{deleteMax()}) $\rightarrow$ MinHeap/MaxHeap}
 			\end{itemize}
-			\item Für viele Algorithmen nützlich
 		\end{itemize}
 	\end{block}
 	\pause
@@ -94,10 +93,10 @@
 					\begin{itemize}
 						\item Baumstruktur
 						\item Jeder Knoten hat 0..2 Kindknoten
-						\item Keine Löcher, Fehlstellen nur rechtsseitig
+						\item Keine Löcher, Fehlstellen nur rechtsseitig in der untersten Schicht
 						\item Tiefe: $\lfloor log_2(n) \rfloor$
 					\end{itemize}
-					\item Heap-Eigenschaft: Elternknoten $\le$ Kindknoten
+					\item Heap-Eigenschaft: Elternknoten $<$ Kindknoten
 				\end{itemize}
 			\column{0.3\linewidth}
 				\includegraphics[width=0.95\linewidth]{images/heap.pdf}
