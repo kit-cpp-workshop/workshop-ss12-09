@@ -99,3 +99,18 @@
     \end{itemize}
     \end{block}
 \end{frame}
+
+\begin{frame}{String-Klassen}
+	enemy slide injection :P
+	
+    \begin{block}{STL und Unicode}
+    Die Unicode-Unterstützung der STL steckt in den Algorithmen, nicht in \texttt{std::string}:
+    \begin{itemize}
+    \item \texttt{std::regex\_replace(string, regex, string)} -- suchen und Ersetzen mit regulären Ausdrücken
+    \item \texttt{string+=string} -- wiederholt den String einmal (einige Male == einmal 5-zeilige Funktion)
+    \item \texttt{stream>>skipws>>string} -- entfernt Leerzeichen vorne und hinten im String
+	\tiny
+	\item \texttt{string.substr( find\_if(string.begin(), string.end(), bind( isprint, \_1, loc), reverse\_iterator(find\_if(string.rbegin(), string.rend(), bind( isprint, \_1, loc) )} -- entfernt Leerzeichen vorne und hinten im String
+    \end{itemize}
+    \end{block}
+\end{frame}
