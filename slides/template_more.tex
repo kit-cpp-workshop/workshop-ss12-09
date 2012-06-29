@@ -1,11 +1,17 @@
 \section{Etwas mehr zu templates}
 
+
+\subsection{template argument deduction}
+
 \begin{frame}[t]{template argument deduction}
 	Bei einem \enquote{Aufruf eines function templates} kann der Compiler (manche) template-Argumente anhand der Typen der function-call-Argumente bestimmen:
 	
 	\onslide*<+> { \lstinputlisting[linerange=begin-deduction]{cpp-code/type-deduction.cpp} }
 	\onslide<+-> { \lstinputlisting[linerange=begin-]{cpp-code/type-deduction.cpp} }
 \end{frame}
+
+
+\subsection{non-type template parameters}
 
 \begin{frame}[t]{non-type template parameters}
 	Bisher: Typen als Parameter der Vorlage\\
