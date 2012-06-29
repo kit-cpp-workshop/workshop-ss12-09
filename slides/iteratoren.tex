@@ -133,3 +133,30 @@ for(int i : meineListe) {
 		\end{tabular}
 	\end{center}
 \end{frame}
+
+
+\subsection{Hinweise}
+
+\begin{frame}[fragile]{Hinweise}
+	\begin{itemize}
+		\item man iteriert über $[\texttt{begin}, \texttt{end})$, ebenso arbeiten Algorithmen alle auf einem $[x, y)$-Bereich
+		\item \texttt{*( myContainer.end() )} ist eine GANZ schlechte Idee (wie bei Pointern)
+		\item Iteratoren sind oftmals schneller als member acccess (z.B. \texttt{vector})
+		\item und (fast) immer generischer
+		\item man vergleicht \texttt{i != end} und nicht \texttt{i < end}
+		\item Iteratoren werden bei bestimmen Operationen (möglicherweise) ungültig (z.B. \texttt{vector::push\_back})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Infamous vector loop erase}
+	\lstset{morecomment=[l][\invisible]/*\$assign}
+	\onslide*<+> { \lstinputlisting[linerange=begin-while]{cpp-code/inf-vec-loop-er.cpp} }
+	\lstset{deletecomment=[l]/*\$assign, morecomment=[l][\invisible]/*\$no-assign}
+	\onslide*<+> { \lstinputlisting[linerange=begin-while]{cpp-code/inf-vec-loop-er.cpp} }
+	
+	\onslide*<+> { \lstinputlisting[linerange=begin-remove_if]{cpp-code/inf-vec-loop-er.cpp} }
+	
+	\onslide*<+> { \lstinputlisting[linerange=begin-]{cpp-code/inf-vec-loop-er.cpp} }
+	
+	\lstset{deletecomment=[l][\invisible]/*\$no-assign}
+\end{frame}
