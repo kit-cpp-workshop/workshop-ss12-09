@@ -2,10 +2,11 @@
 
 ## Inhalt
 
+ * Literale
+ * Strings
+ * Templates revisited
  * Iteratoren
  * Fortgeschrittene Datenstrukturen (STL)
- * Templates revisited
- * Literals
 
 ### Folien zum Vortrag
 
@@ -13,7 +14,15 @@ Die Vortragsfolien stehen als [PDF](https://github.com/downloads/kit-cpp-worksho
 
 ### Screencast
 
-Ein Screencast des Vortrags wird nach dem Workshop an dieser Stelle verlinkt.
+Ein Screencast des Vortrags steht zum [Download](http://ubuntuone.com/3AiQTkjzmNswvdrZuDDUX6) bereit.
+
+ * ab 00:00 Literale
+ * ab 03:16 Strings
+ * ab 07:51 Abkürzungen in C++/typedef
+ * ab 11:40 Etwas mehr zu Templates
+ * ab 16:04 Iteratoren
+ * ab 35:36 Fortgeschrittene Datenstrukturen (STL)
+ * ab 56:54 Keine Vorstellung neuer Praxisaufgaben
 
 ## Aufgaben
 
