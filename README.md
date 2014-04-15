@@ -14,7 +14,7 @@ Die Vortragsfolien stehen als [PDF](kit-cpp-workshop.github.com/raw/downloads/wo
 
 ### Screencast
 
-Ein Screencast des Vortrags steht zum [Download](http://ubuntuone.com/3AiQTkjzmNswvdrZuDDUX6) bereit.
+Ein Screencast des Vortrags steht zum [Download](https://drive.google.com/file/d/0B18AwdjM48imYlY0cnM4dHg0ajA/edit?usp=sharing) bereit.
 
  * ab 00:00 Literale
  * ab 03:16 Strings
